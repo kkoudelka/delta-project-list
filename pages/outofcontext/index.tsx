@@ -3,7 +3,7 @@ import React from "react";
 import { Navbar } from "../../components/navbar";
 import { ooc } from "../../src/out-of-context";
 
-const HomePage: React.FC = () => {
+const OutOfContextHomepage: React.FC = () => {
   return (
     <div>
       <Head>
@@ -36,4 +36,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default OutOfContextHomepage;

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import { ClassSwitch } from "../class-switch";
 
 const Navbar: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const Navbar: React.FC = () => {
             Maturitní projekty - Delta SŠIE
           </span>
         </Link>
+        <ClassSwitch />
       </div>
     </nav>
   );

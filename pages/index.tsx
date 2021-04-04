@@ -5,7 +5,7 @@ import { Navbar } from "../components/navbar";
 import { TridaCard } from "../components/trida-card";
 import { classes } from "../src/projects";
 
-const OutOfContextPage: React.FC = () => {
+const HomePage: React.FC = () => {
   return (
     <div>
       <Head>
@@ -46,4 +46,4 @@ const OutOfContextPage: React.FC = () => {
   );
 };
 
-export default OutOfContextPage;
+export default HomePage;
