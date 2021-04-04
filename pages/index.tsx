@@ -9,7 +9,7 @@ const HomePage: React.FC = () => {
   return (
     <div>
       <Head>
-        <title>Out of context - Maturitní projekty - Delta SŠIE</title>
+        <title>Maturitní projekty - Delta SŠIE</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
