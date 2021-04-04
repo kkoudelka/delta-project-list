@@ -1,7 +1,7 @@
 import { GetServerSideProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Navbar } from "../../components/navbar";
 import { getRandomFromArray } from "../../src/models/helpers";
 import { IOutOfContext } from "../../src/models/types";
@@ -13,6 +13,12 @@ interface IProps {
 }
 
 const OutOfContextRandom: React.FC<IProps> = ({ item }) => {
+  const [showNsfw, setShowNsfw] = useState(!item.nsfw);
+
+  useEffect(() => {
+    setShowNsfw(!item.nsfw);
+  }, [item]);
+
   const [isCopied, setCopied] = useClipboard(
     `https://delta-project-list.vercel.app/outofcontext/${item.imageName}`,
     {
@@ -46,11 +52,32 @@ const OutOfContextRandom: React.FC<IProps> = ({ item }) => {
             </div>
           </div>
           <div className="d-flex lightbox justify-content-center mt-3">
-            <img
-              src={`/out-of-context/${item.imageName}`}
-              alt={item.description ?? ""}
-              className="shadow-1-strong rounded hover-shadow"
-            />
+            {showNsfw && (
+              <img
+                src={`/out-of-context/${item.imageName}`}
+                alt={item.description ?? ""}
+                className="shadow-1-strong rounded hover-shadow"
+              />
+            )}
+            {!showNsfw && (
+              <div className="bg-image">
+                <img
+                  src={`/out-of-context/${item.imageName}`}
+                  alt={item.description ?? ""}
+                />
+                <div className="mask image-blur">
+                  <div className="d-flex flex-column justify-content-center align-items-center h-100">
+                    <h3 className="mb-2">NSFW</h3>
+                    <button
+                      className="btn btn-primary"
+                      onClick={(_) => setShowNsfw(true)}
+                    >
+                      Zobrazit
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </main>

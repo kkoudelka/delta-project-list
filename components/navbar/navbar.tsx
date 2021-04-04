@@ -8,10 +8,23 @@ const Navbar: React.FC = () => {
       <div className="container-fluid">
         <Link href="/">
           <span className="navbar-brand mb-0 h1 cursor-pointer">
-            Maturitní projekty - Delta SŠIE
+            Maturitní projekty
           </span>
         </Link>
-        <ClassSwitch />
+        <div className="d-flex">
+          <a
+            href="https://github.com/kkoudelka/delta-project-list"
+            target="_blank"
+            className="btn btn-outline-primary btn-floating mx-2"
+          >
+            <i
+              className="fab fa-github"
+              data-mdb-toggle="tooltip"
+              title="GitHub repo projektu"
+            ></i>
+          </a>
+          <ClassSwitch />
+        </div>
       </div>
     </nav>
   );

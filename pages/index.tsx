@@ -17,7 +17,9 @@ const HomePage: React.FC = () => {
         <div className="container">
           <div className="p-5 text-center bg-light mb-2">
             <h1 className="mb-3">Maturitní projekty</h1>
-            <h4 className="mb-3">Delta - SŠIE</h4>
+            <Link href="/outofcontext">
+              <h4 className="mb-3">Delta - SŠIE</h4>
+            </Link>
           </div>
           <div
             className="alert my-3 alert-primary"

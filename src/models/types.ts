@@ -17,4 +17,5 @@ export interface IProject {
 export interface IOutOfContext {
   imageName: string;
   description?: string;
+  nsfw?: boolean;
 }
