@@ -1,10 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Delta Matura Project List
+This is a website containing Delta - SŠIE matura projects 
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
+# or
+yarn install
+
+# then
+
 npm run dev
 # or
 yarn dev
@@ -12,23 +18,55 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Adding project to a class
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Navigate to `src/projects/classes`
+- Navigate to folder for your class (e.g. `20-21`)
 
-## Learn More
+### Class file
+- Create a file for your class if it doesn't already exist (e.g. `A20-21.ts`)
+- This file should have a structure like this:
 
-To learn more about Next.js, take a look at the following resources:
+```ts
+import { ITrida } from  "../../../models/types";
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+const A2021: ITrida = {
+	title: "4.A - 2020/2021",
+	unique: "A20-21",
+	domain: "delta-www.cz",
+	projects: [ ... ]
+};
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+export default A2021;
 
-## Deploy on Vercel
+``` 
+- Change it according to your needs.
+- Add your class to array of all classes in `src/projects/classes.ts`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Project
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+ - `projects` in `ITrida` is an array of `IProject`
+ - IProject looks like this:
+ ```ts
+interface IProject {
+	title: string;	//title of the project (required)
+	authorName: string;	// author of the project (required)
+	consultantName?: string;	// name of the lead consultant (optional, default is "")
+	subdomain: string;	// subdomain of the project (i.g. b2016koudka) (required)
+	https?: boolean;	// does the web support https (optional, default is false)
+	inRoot?: boolean;	// web is in root instead of /maturita (optional, default is false)
+}
+``` 
+
+## Creating new out-of-context entry
+- Add your out of context image file to `public/out-of-context` (make sure the image name is unique)
+- Then navigate to `src/out-of-context/index.ts`
+- Add your entry to `ooc` array
+- An entry looks like this:
+```ts
+interface IOutOfContext {
+	imageName: string; // name of the image file you added to public/out-of-context (required)
+	description?: string;	// description of the image (optional)
+}
+```
