@@ -9,7 +9,7 @@ interface IProps {
 const TridaCard: React.FC<IProps> = ({ project, tridaBaseUrl }) => {
   const link = `${project.https ? "https" : "http"}://${
     project.subdomain
-  }.${tridaBaseUrl}/maturita`;
+  }.${tridaBaseUrl}${project.inRoot ? "" : "/maturita"}`;
 
   return (
     <div className="card m-2 py-4 text-center">

@@ -11,4 +11,10 @@ export interface IProject {
   consultantName?: string;
   subdomain: string;
   https?: boolean;
+  inRoot?: boolean;
+}
+
+export interface IOutOfContext {
+  imageName: string;
+  description?: string;
 }

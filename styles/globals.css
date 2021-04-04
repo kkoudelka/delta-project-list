@@ -7,3 +7,15 @@ code {
 .cursor-pointer {
   cursor: pointer;
 }
+
+.image-16x9 {
+  position: relative;
+  padding-bottom: 56.2%;
+}
+
+.image-16x9 img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}

@@ -61,6 +61,7 @@ export const getServerSideProps: GetServerSideProps<IProps> = async (
       notFound: true,
     };
   }
+
   if (trida.projects) {
     const projs = trida.projects;
     trida.projects = projs.sort((a, b) => {

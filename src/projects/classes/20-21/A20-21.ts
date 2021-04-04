@@ -1,4 +1,4 @@
-import { ITrida } from "../../models/types";
+import { ITrida } from "../../../models/types";
 
 const A2021: ITrida = {
   title: "4.A - 2020/2021",
@@ -61,6 +61,7 @@ const A2021: ITrida = {
       title: "Rehabilitační hry",
       authorName: "Lukáš Vacek",
       subdomain: "a2017vacelu",
+      inRoot: true,
     },
     {
       title: "Sbírka úloh z JS",

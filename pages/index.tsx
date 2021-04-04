@@ -5,11 +5,11 @@ import { Navbar } from "../components/navbar";
 import { TridaCard } from "../components/trida-card";
 import { classes } from "../src/projects";
 
-const HomePage: React.FC = () => {
+const OutOfContextPage: React.FC = () => {
   return (
     <div>
       <Head>
-        <title>Maturitní projekty - Delta SŠIE</title>
+        <title>Out of context - Maturitní projekty - Delta SŠIE</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Navbar />
@@ -46,4 +46,4 @@ const HomePage: React.FC = () => {
   );
 };
 
-export default HomePage;
+export default OutOfContextPage;

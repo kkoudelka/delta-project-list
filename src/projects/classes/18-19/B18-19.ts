@@ -1,4 +1,4 @@
-import { ITrida } from "../../models/types";
+import { ITrida } from "../../../models/types";
 
 const B1819: ITrida = {
   title: "4.B - 2018/2019",
