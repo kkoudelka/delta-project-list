@@ -53,7 +53,7 @@ interface IProject {
 	title: string;	//title of the project (required)
 	authorName: string;	// author of the project (required)
 	consultantName?: string;	// name of the lead consultant (optional, default is "")
-	subdomain: string;	// subdomain of the project (i.g. b2016koudka) (required)
+	subdomain: string;	// subdomain of the project (e.g. b2016koudka) (required)
 	https?: boolean;	// does the web support https (optional, default is false)
 	inRoot?: boolean;	// web is in root instead of /maturita (optional, default is false)
 }
@@ -66,7 +66,7 @@ interface IProject {
 - An entry looks like this:
 ```ts
 interface IOutOfContext {
-	imageName: string; // name of the image file you added to public/out-of-context (required)
+	imageName: string; // name of the image file you added to public/out-of-context (e.g. lol1.png) (required)
 	description?: string;	// description of the image (optional)
 }
 ```
