@@ -22,4 +22,6 @@ export const ooc: IOutOfContext[] = [
   { imageName: "ludfiu010.png" },
   { imageName: "ludfiu011.png" },
   { imageName: "ludfiu012.png" },
+  { imageName: "ludfiu013.png" },
+  { imageName: "ludfiu014.png" },
 ];
