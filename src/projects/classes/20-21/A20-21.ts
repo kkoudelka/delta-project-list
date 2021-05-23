@@ -8,7 +8,7 @@ const A2021: ITrida = {
     {
       title: "Digitální garáž",
       authorName: "Pavel Pel",
-      subdomain: "a2017pelpa",
+      subdomain: "a2017pelapa",
     },
     { title: "DIWHY", authorName: "Matyáš Peremský", subdomain: "a2017perema" },
     { title: "KROSEJ", authorName: "Adam Zachoval", subdomain: "a2017zachoad" },
