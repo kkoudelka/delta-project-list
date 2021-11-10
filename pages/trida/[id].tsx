@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import React from "react";
 import { Alert } from "../../components/alerts";
@@ -49,18 +49,19 @@ const TridaProjectsPage: React.FC<IProps> = ({ trida }) => {
 
 export default TridaProjectsPage;
 
-export const getServerSideProps: GetServerSideProps<IProps> = async (
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: classes.map((x) => ({ params: { id: x.unique } })),
+    fallback: false,
+  };
+}
+
+export const getStaticProps: GetStaticProps<IProps> = async (
   context
 ) => {
-  const tridaId = context.query.id.toString();
+  const tridaId = context.params.id.toString();
 
   const trida = classes.find((x) => x.unique === tridaId);
-
-  if (!trida) {
-    return {
-      notFound: true,
-    };
-  }
 
   if (trida.projects) {
     const projs = trida.projects;
