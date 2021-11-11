@@ -1,4 +1,4 @@
-import { GetServerSideProps } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
@@ -87,24 +87,19 @@ const OutOfContextItemPage: React.FC<IProps> = ({ item }) => {
 
 export default OutOfContextItemPage;
 
-export const getServerSideProps: GetServerSideProps<IProps> = async (
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {
+    paths: ooc.map((item) => ({ params: { name: item.imageName } })),
+    fallback: false,
+  }
+}
+
+export const getStaticProps: GetStaticProps = async (
   context
 ) => {
-  const fileName = context.query.name.toString();
-
-  if (!fileName) {
-    return {
-      notFound: true,
-    };
-  }
+  const fileName = context.params.name.toString();
 
   const item = ooc.find((x) => x.imageName === fileName);
-
-  if (!item) {
-    return {
-      notFound: true,
-    };
-  }
 
   return {
     props: {
