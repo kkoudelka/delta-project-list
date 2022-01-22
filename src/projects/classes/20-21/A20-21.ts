@@ -113,6 +113,12 @@ const A2021: ITrida = {
       title: "Portfolio společnosti Noshteen",
       authorName: "Adam Absolon",
       subdomain: "a2017absoad",
+      keywords: [
+        "firemní identita",
+        "webová prezentace",
+        "propagační materiály",
+        "grafický dizajn",
+      ],
     },
   ],
 };

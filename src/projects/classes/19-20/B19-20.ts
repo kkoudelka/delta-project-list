@@ -45,6 +45,14 @@ const B1920: ITrida = {
       title: "MyBranch",
       authorName: "Karel Koudelka",
       subdomain: "b2016koudka",
+      keywords: [
+        "Webová aplikace",
+        "mobilní aplikace",
+        "NextJS",
+        "Flutter",
+        "GraphQL",
+        "interaktivní videa",
+      ],
     },
     {
       title: "Marketingová strategie firmy U Dvou krkoviček s.r.o.",
