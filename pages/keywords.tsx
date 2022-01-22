@@ -30,11 +30,25 @@ const KeywordPage: React.FC<IProps> = ({ keywordProjects }) => {
             </Link>
           </div>
 
+          <div className="list-group list-group-horizontal flex-wrap list-group-flush">
+            {keywordProjects.map((x, i) => (
+              <div key={i} className="px-1 py-1">
+                <Link key={i} href={`#keyword-${i}`} passHref>
+                  <div className="btn btn-sm btn-outline-primary">
+                    {x.keyword} ({x.projects.length ?? 0})
+                  </div>
+                </Link>
+              </div>
+            ))}
+          </div>
+
           {keywordProjects.map((a, i) => (
             <div key={i}>
               <div className="row my-2">
                 <div className="col-12">
-                  <h3 className="h3-responsive">{a.keyword}</h3>
+                  <h3 className="h3-responsive" id={`keyword-${i}`}>
+                    {a.keyword}
+                  </h3>
                 </div>
                 {a.projects.map((x, y) => (
                   <div key={`proj-${y}`} className="col-12 col-md-6 col-lg-4">
@@ -57,7 +71,7 @@ const KeywordPage: React.FC<IProps> = ({ keywordProjects }) => {
 export default KeywordPage;
 
 export const getStaticProps: GetStaticProps<IProps> = async (context) => {
-  // take projects from each class into a variable
+  // take projects from each className into a variable
   const projects: IProject[] = classes.reduce((acc, curr) => {
     return [...acc, ...curr.projects];
   }, []);
