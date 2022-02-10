@@ -1,0 +1,123 @@
+import { ITrida } from "../../../models/types";
+
+const B2022: ITrida = {
+	title: "4.B - 2021/2022",
+	unique: "B21-22",
+	domain: "delta-www.cz",
+	projects: [
+		{
+			title: "SSK 0062",
+			authorName: "Samuel Balcar",
+			subdomain: "b2018balcsa",
+			consultantName: "Richard Brun",
+			https: true,
+		},
+		{
+			title: "Gasko Prim",
+			authorName: "Adam Brejtr",
+			subdomain: "b2018brejad",
+			consultantName: "Daniel Václavík",
+			https: true,
+		},
+		{
+			title: "BCoin",
+			authorName: "Filip Brůna",
+			subdomain: "b2018brunfi",
+			consultantName: "Vlaďka Janů",
+			https: true,
+		},
+		{
+			title: "McFrog",
+			authorName: "Marek Dobsa",
+			subdomain: "b2018dobsma",
+			consultantName: "Adéla Klapal",
+			https: true,
+		},
+		{
+			title: "zajímavymuz.cz",
+			authorName: "Marek Fadrný",
+			subdomain: "b2018fadrma",
+			consultantName: "Adéla Klapal",
+			https: true,
+		},
+		{
+			title: "Kewin + Film",
+			authorName: "Václav Horáček",
+			subdomain: "b2018horava",
+			consultantName: "Richard Brun",
+			https: true,
+		},
+		{
+			title: "HansForms",
+			authorName: "Jan Hubený",
+			subdomain: "b2018hubeja",
+			consultantName: "Jan Koupil",
+			https: true,
+		},
+		{
+			title: "Codeventure",
+			authorName: "Josef Kahoun",
+			subdomain: "b2018kahojo",
+			consultantName: "Daniel Václavík",
+			https: true,
+		},
+		{
+			title: "Histories",
+			authorName: "Kryštof Krátký",
+			subdomain: "b2018kratkr",
+			consultantName: "Jan Koupil",
+			https: true,
+		},
+		{
+			title: "AERY BEAUTY",
+			authorName: "František Kvapil",
+			subdomain: "b2018kvapfr",
+			consultantName: "Daniel Václavík",
+			https: true,
+		},
+		{
+			title: "Penzion u Zvoničky",
+			authorName: "Marek Kyncl",
+			subdomain: "b2018kyncma",
+			consultantName: "Veronika Hořeňovská",
+			https: true,
+		},
+		{
+			title: "Histories",
+			authorName: "Matyáš Linhart",
+			subdomain: "b2018linhma",
+			consultantName: "Daniel Václavík",
+			https: true,
+		},
+		{
+			title: "Codeventure",
+			authorName: "Michal Maděra",
+			subdomain: "b2018mademi",
+			consultantName: "Jan Koupil",
+			https: true,
+		},
+		{
+			title: "HOŘÍ TO!",
+			authorName: "Josef Pavlas",
+			subdomain: "b2018pavljo",
+			consultantName: "Richard Brun",
+			https: true,
+		},
+		{
+			title: "IT'sFixed",
+			authorName: "Viktor Skořepa",
+			subdomain: "b2018skorvi",
+			consultantName: "Vlaďka Janů",
+			https: true,
+		},
+		{
+			title: "cocaléro(POKY)",
+			authorName: "Marek Tušic",
+			subdomain: "b2018tusima",
+			consultantName: "Veronika Hořeňovská",
+			https: true,
+		},
+	],
+};
+
+export default B2022;
