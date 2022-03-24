@@ -111,7 +111,7 @@ const B2022: ITrida = {
 			https: true,
 		},
 		{
-			title: "cocaléro(POKY)",
+			title: "POKY",
 			authorName: "Marek Tušic",
 			subdomain: "b2018tusima",
 			consultantName: "Veronika Hořeňovská",
