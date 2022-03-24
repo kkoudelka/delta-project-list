@@ -12,10 +12,16 @@ export interface IProject {
   subdomain: string;
   https?: boolean;
   inRoot?: boolean;
+  keywords?: string[];
 }
 
 export interface IOutOfContext {
   imageName: string;
   description?: string;
   nsfw?: boolean;
+}
+
+export interface IKeywordProjects {
+  keyword: string;
+  projects: { project: IProject; tridaBaseUrl: string }[];
 }

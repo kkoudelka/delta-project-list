@@ -58,6 +58,7 @@ interface IProject {
   subdomain: string; // subdomain of the project (e.g. b2016koudka) (required)
   https?: boolean; // does the web support https (optional, default is false)
   inRoot?: boolean; // web is in root instead of /maturita (optional, default is false)
+  keywords?: string[]; // keywords of the project (optional, default is []) - helps to find the project by keywords
 }
 ```
 
