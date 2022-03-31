@@ -62,7 +62,7 @@ const B2022: ITrida = {
 			https: true,
 		},
 		{
-			title: "Histories",
+			title: "Histories.cc",
 			authorName: "Kryštof Krátký",
 			subdomain: "b2018kratkr",
 			consultantName: "Jan Koupil",
@@ -83,7 +83,7 @@ const B2022: ITrida = {
 			https: true,
 		},
 		{
-			title: "Histories",
+			title: "Histories.cc",
 			authorName: "Matyáš Linhart",
 			subdomain: "b2018linhma",
 			consultantName: "Daniel Václavík",
