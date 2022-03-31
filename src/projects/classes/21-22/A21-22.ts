@@ -113,7 +113,7 @@ const A2022: ITrida = {
 		{
 			title: "Veterinární ordinace Litomyšl",
 			authorName: "Dominik Štusák",
-			subdomain: "a2018stusdo",
+			subdomain: "a2017stusdo",
 			https: true,
 			consultantName: "Veronika Hořeňovská",
 		},
